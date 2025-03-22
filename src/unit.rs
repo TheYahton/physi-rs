@@ -22,6 +22,10 @@ impl SIUnit {
         }
     }
 
+    pub const fn from_dim(value: f64, dim: SIDimension) -> Self {
+        Self { value, dim }
+    }
+
     pub fn dim_eq(&self, other: &Self) -> bool {
         self.dim == other.dim
     }
